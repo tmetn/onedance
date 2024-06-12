@@ -1,0 +1,13 @@
+entity Library {
+  name String required,
+  description String
+}
+
+entity Books {
+  name String required,
+  count Integer
+}
+
+relationship OneToMany {
+  Foo to Bar
+}
