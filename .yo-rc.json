@@ -2,7 +2,7 @@
   "generator-jhipster": {
     "applicationType": "microservice",
     "authenticationType": "oauth2",
-    "baseName": "myApplication",
+    "baseName": "OneDance",
     "blueprints": [],
     "buildTool": "maven",
     "cacheProvider": "redis",

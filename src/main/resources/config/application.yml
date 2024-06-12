@@ -198,8 +198,8 @@ jhipster:
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**
-    title: My Application API
-    description: My Application API documentation
+    title: OneDance API
+    description: OneDance API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

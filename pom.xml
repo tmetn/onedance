@@ -7,8 +7,8 @@
     <artifactId>my-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>My Application</name>
-    <description>Description for My Application</description>
+    <name>One Dance</name>
+    <description>Description for OneDance</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

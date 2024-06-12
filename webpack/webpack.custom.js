@@ -30,7 +30,7 @@ module.exports = async (config, options, targetOptions) => {
         },
       }),
       new WebpackNotifierPlugin({
-        title: 'My Application',
+        title: 'OneDance',
         contentImage: path.join(__dirname, 'logo-jhipster.png'),
       }),
     );

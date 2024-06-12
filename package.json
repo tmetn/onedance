@@ -2,7 +2,7 @@
   "name": "my-application",
   "version": "0.0.1-SNAPSHOT",
   "private": true,
-  "description": "Description for My Application",
+  "description": "Description for OneDance",
   "license": "UNLICENSED",
   "scripts": {
     "app:start": "./mvnw",
