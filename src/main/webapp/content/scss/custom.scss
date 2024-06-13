@@ -1,4 +1,14 @@
 .footer {
   background: rgb(54, 147, 138);
-  height: 10vh; /* Example height */
+  height: 15vh; /* Example height */
+  animation: 10s alternate infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
