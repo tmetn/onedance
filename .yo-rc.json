@@ -10,6 +10,10 @@
     "clientPackageManager": "npm",
     "creationTimestamp": 1717975038174,
     "databaseType": "mongodb",
+<<<<<<< HEAD
+=======
+    "dbRandomPassword": "f1eec4e5587e496304c6b45fedd3f44568baf688791f8b46696f924b7624",
+>>>>>>> fdeac13 (add Dockerfile and configs for redis, mongo, consul, sonar)
     "devDatabaseType": "mongodb",
     "devServerPort": 4200,
     "enableHibernateCache": false,
