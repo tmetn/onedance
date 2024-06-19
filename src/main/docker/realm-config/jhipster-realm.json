@@ -646,7 +646,7 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "jhipster-control-center",
-      "redirectUris": ["dev.localhost.ionic:*", "http://127.0.0.1:*", "http://localhost:*", "https://127.0.0.1:*", "https://localhost:*"],
+      "redirectUris": ["dev.localhost.ionic:*", "http://0.0.0.0:*", "http://localhost:*", "https://0.0.0.0:*", "https://localhost:*"],
       "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
@@ -772,9 +772,9 @@
       "secret": "web_app",
       "redirectUris": [
         "dev.localhost.ionic:*",
-        "http://127.0.0.1:*",
+        "http://0.0.0.0:*",
         "http://localhost:*",
-        "https://127.0.0.1:*",
+        "https://0.0.0.0:*",
         "https://localhost:*",
         "https://oauth.pstmn.io/v1/callback"
       ],

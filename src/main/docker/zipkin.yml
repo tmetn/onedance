@@ -4,4 +4,4 @@ services:
   zipkin:
     image: openzipkin/zipkin:3.4
     ports:
-      - 127.0.0.1:9411:9411
+      - 0.0.0.0:9411:9411

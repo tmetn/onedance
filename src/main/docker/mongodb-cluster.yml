@@ -4,9 +4,9 @@ services:
   mongodb:
     image: mongo:7.0.6
     # If you want to expose these ports outside your dev PC,
-    # remove the "127.0.0.1:" prefix
+    # remove the "0.0.0.0:" prefix
     ports:
-      - 127.0.0.1:27017:27017
+      - 0.0.0.0:27017:27017
     command: mongos --configdb csvr/myapplication-mongodb-config --bind_ip 0.0.0.0
   mongodb-node:
     build:
