@@ -77,11 +77,11 @@ public class MyApplicationApp {
         String contextPath = Optional.ofNullable(env.getProperty("server.servlet.context-path"))
             .filter(StringUtils::isNotBlank)
             .orElse("/");
-        String hostAddress = "localhost";
+        String hostAddress = "0.0.0.0";
         try {
-            hostAddress = InetAddress.getLocalHost().getHostAddress();
+            hostAddress = InetAddress.get0.0.0.0().getHostAddress();
         } catch (UnknownHostException e) {
-            log.warn("The host name could not be determined, using `localhost` as fallback");
+            log.warn("The host name could not be determined, using `0.0.0.0` as fallback");
         }
         log.info(
             CRLFLogConverter.CRLF_SAFE_MARKER,
@@ -89,7 +89,7 @@ public class MyApplicationApp {
 
             ----------------------------------------------------------
             \tApplication '{}' is running! Access URLs:
-            \tLocal: \t\t{}://localhost:{}{}
+            \tLocal: \t\t{}://0.0.0.0:{}{}
             \tExternal: \t{}://{}:{}{}
             \tProfile(s): \t{}
             ----------------------------------------------------------""",

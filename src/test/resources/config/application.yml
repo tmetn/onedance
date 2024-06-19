@@ -37,7 +37,7 @@ spring:
     serialization:
       write-durations-as-timestamps: false
   mail:
-    host: localhost
+    host: 0.0.0.0
   main:
     allow-bean-definition-overriding: true
   messages:
@@ -67,7 +67,7 @@ spring:
 
 server:
   port: 10344
-  address: localhost
+  address: 0.0.0.0
 
 # ===================================================================
 # JHipster specific properties
@@ -78,14 +78,14 @@ jhipster:
   clientApp:
     name: 'myApplicationApp'
   mail:
-    from: myApplication@localhost.com
-    base-url: http://127.0.0.1:8080
+    from: myApplication@0.0.0.0.com
+    base-url: http://0.0.0.0:8080
   logging:
     # To test json console appender
     use-json-format: false
     logstash:
       enabled: false
-      host: localhost
+      host: 0.0.0.0
       port: 5000
       ring-buffer-size: 512
 

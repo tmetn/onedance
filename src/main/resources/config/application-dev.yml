@@ -23,7 +23,7 @@ logging:
 management:
   zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://0.0.0.0:9411/api/v2/spans
   tracing:
     sampling:
       probability: 1.0 # report 100% of traces
@@ -52,11 +52,11 @@ spring:
           - git-version=${git.commit.id.describe:}
           - git-commit=${git.commit.id.abbrev:}
           - git-branch=${git.branch:}
-      host: localhost
+      host: 0.0.0.0
       port: 8500
   data:
     mongodb:
-      uri: mongodb://localhost:27017/myApplication
+      uri: mongodb://0.0.0.0:27017/myApplication
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
@@ -75,14 +75,14 @@ jhipster:
   cache: # Cache configuration
     redis: # Redis configuration
       expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
-      server: redis://localhost:6379
+      server: redis://0.0.0.0:6379
       cluster: false
-      # server: redis://localhost:6379,redis://localhost:16379,redis://localhost:26379
+      # server: redis://0.0.0.0:6379,redis://0.0.0.0:16379,redis://0.0.0.0:26379
       # cluster: true
   # CORS is disabled by default on microservices, as you should access them through a gateway.
   # If you want to enable it, please uncomment the configuration below.
   # cors:
-  #   allowed-origins: "http://localhost:9000,https://localhost:9000"
+  #   allowed-origins: "http://0.0.0.0:9000,https://0.0.0.0:9000"
   #   allowed-methods: "*"
   #   allowed-headers: "*"
   #   exposed-headers: "Authorization,Link,X-Total-Count"
@@ -92,7 +92,7 @@ jhipster:
     use-json-format: false # By default, logs are not in Json format
     logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
       enabled: false
-      host: localhost
+      host: 0.0.0.0
       port: 5000
       ring-buffer-size: 512
 # ===================================================================

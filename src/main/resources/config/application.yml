@@ -136,7 +136,7 @@ spring:
       client:
         provider:
           oidc:
-            issuer-uri: http://localhost:9080/realms/jhipster
+            issuer-uri: http://0.0.0.0:9080/realms/jhipster
         registration:
           oidc:
             client-id: internal
@@ -187,14 +187,14 @@ jhipster:
     name: 'myApplicationApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
-  #   allowed-origins: "http://localhost:8100,http://localhost:9000"
+  #   allowed-origins: "http://0.0.0.0:8100,http://0.0.0.0:9000"
   #   allowed-methods: "*"
   #   allowed-headers: "*"
   #   exposed-headers: "Authorization,Link,X-Total-Count,X-${jhipster.clientApp.name}-alert,X-${jhipster.clientApp.name}-error,X-${jhipster.clientApp.name}-params"
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: myApplication@localhost
+    from: myApplication@0.0.0.0
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**

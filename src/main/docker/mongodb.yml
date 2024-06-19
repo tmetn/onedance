@@ -10,7 +10,7 @@ services:
     # volumes:
     #   - ~/volumes/jhipster/myApplication/mongodb/:/data/db/
     healthcheck:
-      test: ['CMD', 'echo', '''db.runCommand("ping").ok''', '|', 'mongo', 'localhost:27017/test', '--quiet']
+      test: ['CMD', 'echo', '''db.runCommand("ping").ok''', '|', 'mongo', '0.0.0.0:27017/test', '--quiet']
       interval: 5s
       timeout: 5s
       retries: 10
