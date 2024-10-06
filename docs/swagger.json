@@ -1,0 +1,17 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Flamingo Commerce Demo Shop",
+        "contact": {
+            "name": "Flamingo",
+            "url": "https://gitter.im/i-love-flamingo/community#",
+            "email": "flamingo@aoe.com"
+        },
+        "license": {
+            "name": "MIT"
+        },
+        "version": "1.0"
+    },
+    "basePath": "/en",
+    "paths": {}
+}

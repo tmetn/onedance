@@ -1,0 +1,122 @@
+# Flamingo core related configurations:
+flamingo:
+  web:
+    filter:
+      cachestrategy:
+        default:
+          # disable http caching by default
+          revalidateEachTime: true
+          isReusable: false
+  debug:
+    mode: false
+  session:
+    backend: memory # in prod you will use something like redis
+  zap:
+    loglevel: Warn
+  prefixrouter:
+    rootRedirectHandler:
+      enabled: true
+      redirectTarget: "/en/"
+  opencensus:
+    tracing:
+      sample:
+        blacklist:
+          - "/image"
+          - "/static"
+
+core:
+  oauth:
+    server: 'https://accounts.google.com'
+    secret: "%%ENV:OAUTH_SECRET%%"
+    clientid: flamingo
+    myhost: '%%ENV:FLAMINGO_HOSTNAME%%'
+    disableOfflineToken: true
+    mapping.idToken:
+      groups: "UserType"
+  locale:
+    locale: en-gb
+    translationFiles:
+      - translations/merged/en-gb.all.yaml
+    accounting:
+      default:
+        thousand: ','
+        decimal: '.'
+        formatZero: '%s -.-'
+        format: "%s %v"
+      EUR:
+        thousand: '.'
+        decimal: ','
+        formatZero: '-,- %s'
+        format: "%v %s"
+    numbers:
+      decimal:  '.'
+      thousand: ','
+      precision: 1
+    date:
+      dateFormat:  02 Jan 2006
+      timeFormat: 15:04
+      dateTimeFormat: 02 Jan 2006 15:04:05
+      location: Europe/London
+
+# By convention "template" is the namespace of configs just used in the template
+template:
+  defaultTitle: "Flamingo Commerce Demo"
+  product:
+    descriptionAttributes:
+      - size
+      - colour
+      - clothing_size
+
+# Configs for flamingo-commerce modules
+commerce:
+  pagination:
+    defaultPageSize: 8
+    showAroundActivePageAmount: 2
+  cart:
+    defaultCartAdapter:
+      enabled: true
+      defaultTaxRate: 19
+    placeOrderLogger:
+        enabled: true
+        useFlamingoLog: true
+        logAsFile: true
+        logDirectory: "./orders/"
+    defaultDeliveryCode: delivery
+    enableCartCache: false
+  checkout:
+    showEmptyCartPageIfNoItems: true
+  payment:
+    enableOfflinePaymentGateway: true
+  customer:
+    useNilCustomerAdapter: true
+  category:
+    useCategoryFixedAdapter: false
+
+graphql:
+  introspectionEnabled: true # should be turned off in prod env
+
+
+flamingoCommerceAdapterStandalone:
+  csvindexing:
+    products:
+      file:
+        path: "resources/products/products_en.csv"
+        delimiter: ","
+    categories:
+      file:
+        path: "resources/products/categories.csv"
+        delimiter: ","
+    locale: "en_GB"
+    currency: "GBP"
+  commercesearch:
+    enableIndexing: true
+    repositoryAdapter: bleve
+    bleveAdapter:
+      enableCategoryFacet: true
+      facetConfig:
+      - attributeCode: brandCode
+        amount: 10
+  emailplaceorder:
+    emailAddress: "flamingo@flamingo.me"
+    fromMail: "flamingo@flamingo.me"
+    fromName: "Flamingo Webstore"

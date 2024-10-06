@@ -1,0 +1,12 @@
+basePath: /en
+info:
+  contact:
+    email: flamingo@aoe.com
+    name: Flamingo
+    url: https://gitter.im/i-love-flamingo/community#
+  license:
+    name: MIT
+  title: Flamingo Commerce Demo Shop
+  version: "1.0"
+paths: {}
+swagger: "2.0"

@@ -1,0 +1,9 @@
+flamingo:
+  session:
+    cookie:
+      secure: false
+  debug:
+    mode: true
+core:
+  zap:
+    loglevel: Debug

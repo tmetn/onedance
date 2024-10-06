@@ -1,0 +1,18 @@
+[
+  {
+    "id": "error.common.headline",
+    "translation": "Error occured"
+  },
+  {
+    "id": "error.homeButton",
+    "translation": "Back to home"
+  },
+  {
+    "id": "error.404.headline",
+    "translation": "Error 404"
+  },
+  {
+    "id": "error.503.headline",
+    "translation": "Error 503"
+  }
+]

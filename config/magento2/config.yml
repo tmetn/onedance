@@ -1,0 +1,19 @@
+flamingo:
+  router:
+    path: /magento
+
+commerce:
+  category:
+    useCategoryFixedAdapter: false
+
+flamingo-commerce-adapter-magento2:
+  product:
+    csvPath: "resources/magento/catalog_product.csv"
+  magento2:
+    #accessToken: REPLACEME
+    #host: local.magento
+    #scheme: http
+    path: /rest/default
+
+flamingo-commerce-adapter-standalone:
+  enableIndexing: true
