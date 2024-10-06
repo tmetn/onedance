@@ -47,9 +47,9 @@ update:
 	go get -u flamingo.me/flamingo/v3 flamingo.me/flamingo-commerce/v3@v3
 
 dockerpublish:
-	GOOS=linux go build -o flamingo-commerce-demo-carotene main.go
-	docker build --no-cache -t iloveflamingo/flamingo-commerce-demo-carotene .
-	docker push iloveflamingo/flamingo-commerce-demo-carotene:latest
+	GOOS=linux go build -o onedance main.go
+	docker build --no-cache -t tanermetin/onedance .
+	docker push tanermetin/onedance:latest
 
 generate-graphql:
 	go generate
