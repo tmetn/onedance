@@ -7,11 +7,11 @@ COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 ADD frontend/dist /frontend/dist
 ADD frontend/src /frontend/src
-ADD flamingo-commerce-demo-carotene /flamingo-commerce-demo-carotene
+ADD onedance /onedance
 ADD config /config
 ADD translations /translations
 ADD resources /resources
 ADD docs/swagger.json /docs/swagger.json
 
-ENTRYPOINT ["/flamingo-commerce-demo-carotene"]
+ENTRYPOINT ["/onedance"]
 CMD ["serve"]
